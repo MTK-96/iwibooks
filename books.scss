@@ -1,0 +1,519 @@
+// Color Variables
+$bgblue: #2382b8;
+$lbgblue: #75bad3;
+$pal-blue: #0070ba;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+$Robo: 'Roboto', sans-serif;
+$Lato: 'Lato', sans-serif;
+
+@font-face{
+    font-family: bold;
+    src: url(/fonts/Axis-Extrabold.otf);
+}
+
+@font-face{
+    font-family: book;
+    src: url(/fonts/ITCKRIST.TTF);
+}
+
+@font-face{
+    font-family: monst;
+    src: url(/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face{
+    font-family: openSans;
+    src: url(/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+// Book Page Content
+
+.book-content{
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em 1em 1em;
+
+        .book-card{
+            background: #fff;
+
+            .book-card-container{
+                padding: 1em 1.5em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img{
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                a{
+
+                    button{
+                        margin-top: 0.5em;
+                        width: 100%;
+                        background: $pal-blue;
+                        border: 1px solid transparent;
+                        padding: 0.8em;
+                        color: #fff;
+                        text-transform: uppercase;
+                        outline: none;
+                        letter-spacing: 1.5px;
+                        cursor: pointer;
+                        font-size: 0.65em;
+                        font-family: bold;
+                        border-radius: 4px;
+
+                        i{
+                            margin-left: 0.8em;
+                        }
+                    }
+                }
+
+                .book-details{
+
+                    ul{
+                        padding: 0;
+                        list-style: none;
+
+                        h3{
+                            font-family: bold;
+                            font-size: 1.05em;
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        li{
+                            margin-top: 0.5em;
+                            font-size: 0.9em;
+                            font-family: monst;
+                            color: #7e7e7e;
+
+                            b{
+                                font-family: $Lato;
+                                text-transform: uppercase;
+                                font-size: 0.9em;
+                                font-weight: bold;
+                                color: #303030;
+                            }
+                        }
+                    }
+
+                    h3{
+                        margin: 0 0 0.3em 0;
+                        font-family: bold;
+                    }
+
+                    p{
+                        font-family: monst;
+                        color: #7e7e7e;
+                    }
+                }
+            }
+        }
+
+        .pay-col{
+            margin-top: 1em;
+            background: #fff;
+
+            .pay-container{
+                padding: 1em 1.5em;
+                display: flex;
+                flex-direction: column;
+
+                #pay-contain{
+                    display: flex;
+                    align-items: center;
+                    margin: 0.7em 0;
+                    flex-direction: column;
+
+                    .pay-del-head{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+
+                        h3{
+                            margin: 0.5em 0 0.5em 1em;
+                            font-family: bold;
+                            font-size: 0.9em;
+                        }
+                    }
+
+                    .pay-del-price{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 0.4em;
+                        align-items: center;
+                        flex-direction: row-reverse;
+
+                        p{
+                            font-family: monst;
+                            font-size: 0.85em;
+
+                            &:nth-of-type(2){
+                                color: #ef4040;
+                                font-size: 1.4em;
+                                font-family: monst;
+                            }
+    
+                            i{
+                                font-size: 0.6em;
+                            }
+
+                            span{
+                                font-size: 0.6em;
+                            }
+                        }
+                    }
+
+                    p{
+                        font-size: 0.7em;
+                        font-family: monst;
+                    }
+
+                    .paypal{
+                        width: 100%;
+
+                        form{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1150px){
+
+    .res-wrapper{
+        max-width: 970px;
+    }
+
+    .book-content{
+        height: 90vh;
+
+        .container{
+            height: auto;
+            justify-content: center;
+            padding: 0 1.5em 1.5em 1.5em;
+
+            .book-card{
+
+                .book-card-container{
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    
+
+                    .img-container{
+                        flex-basis: 40%;
+
+                        img{
+                            margin: 0;
+                        }
+                    }
+
+                    .book-details{
+                        margin-left: 2.5em;
+                        flex-basis: 80%;
+
+                        ul{
+
+                            li{
+                                margin-top: 0.3em;
+                            }
+
+                            h3{
+                                    font-size: 1.3em;
+                                    margin-top: 0;
+                            }                            
+                        }
+
+                        p{
+                            font-size: 0.65em;
+                        }
+                    }
+                }
+            }
+
+            .pay-col{
+
+                .pay-container{
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    #pay-contain{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: 0.7em;
+
+                        .pay-del-head{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+
+                            h3{
+                                margin: 0.5em 0 0.5em 1em;
+                                font-family: bold;
+                                font-size: 0.9em;
+                            }
+                        }
+
+                        p{
+                            font-size: 0.6em;
+                            font-family: monst;
+                        }
+
+                        button{
+                            width: 100%;
+                            padding: 0.5em;
+                            border: none;
+                            outline: none;
+                            font-family: bold;
+                            text-transform: uppercase;
+
+                            i{
+                                margin-right: 0.8em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1920px){
+
+    .res-wrapper{
+        max-width: 1366px;
+    }
+
+    .book-content{
+        height: 94.6vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container{
+
+            .book-card{
+
+                .book-card-container{
+                    padding: 2em;
+                    align-items: flex-start;
+                    
+
+                    .img-container{
+                        flex-basis: 48%;
+
+                        a{
+                            button{
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+
+                    .book-details{
+                        flex-basis: 100%;
+
+                        ul{
+
+                            h3{
+                                    font-size: 1.8em;
+                                    margin-top: 0;
+                            }
+                            
+                            li{
+                                font-size: 1em;
+                                margin-top: 0.8em;
+                            }
+                        }
+
+                        p{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+
+            .pay-col{
+
+                .pay-container{
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    #pay-contain{
+
+                        .pay-del-head{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+
+                            h3{
+                                margin: 0.5em 0 0.5em 1em;
+                                font-family: bold;
+                                font-size: 1.2em;
+                            }
+                        }
+
+                        p{
+                            font-size: 0.9em;
+                            font-family: monst;
+                        }
+
+                        button{
+                            width: 100%;
+                            padding: 0.5em;
+                            border: none;
+                            outline: none;
+                            font-family: bold;
+                            text-transform: uppercase;
+
+                            i{
+                                margin-right: 0.8em;
+                            }
+                        }
+
+                        .pay-del-price{
+                            p{
+                                font-size: 1.2em;
+
+                                &:nth-of-type(2){
+                                    font-size: 2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 2200px){
+
+    .res-wrapper{
+        max-width: 1366px;
+    }
+
+    .book-content{
+        height: 94.6vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container{
+
+            .book-card{
+
+                .book-card-container{
+                    padding: 2em;
+                    align-items: flex-start;
+                    
+
+                    .img-container{
+                        flex-basis: 58%;
+
+                        a{
+                            button{
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+
+                    .book-details{
+                        flex-basis: 100%;
+
+                        ul{
+
+                            h3{
+                                    font-size: 1.8em;
+                                    margin-top: 0;
+                            }
+                            
+                            li{
+                                font-size: 1.2em;
+                                margin-top: 0.8em;
+                            }
+                        }
+
+                        p{
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+
+            .pay-col{
+
+                .pay-container{
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    #pay-contain{
+
+                        .pay-del-head{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+
+                            h3{
+                                margin: 0.5em 0 0.5em 1em;
+                                font-family: bold;
+                                font-size: 1.2em;
+                            }
+                        }
+
+                        p{
+                            font-size: 0.9em;
+                            font-family: monst;
+                        }
+
+                        button{
+                            width: 100%;
+                            padding: 0.5em;
+                            border: none;
+                            outline: none;
+                            font-family: bold;
+                            text-transform: uppercase;
+
+                            i{
+                                margin-right: 0.8em;
+                            }
+                        }
+
+                        .pay-del-price{
+                            p{
+                                font-size: 1.2em;
+
+                                &:nth-of-type(2){
+                                    font-size: 2em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
